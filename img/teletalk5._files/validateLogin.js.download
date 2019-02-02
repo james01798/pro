@@ -1,0 +1,26 @@
+function validateLoginForm (element) {
+ var ob = element.username;
+ var userName=ob.value;
+ userName=userName.trim();
+ if(userName=="")
+ {
+  alert("Your username cannot be empty");
+  document.getElementById("userNameContainer").style.borderColor = "red";
+  ob.focus();
+  
+  
+  return false;
+
+ }
+ ob=element.password;
+ var pass=ob.value;
+ pass=pass.trim();
+ if(pass=="")
+ {
+  alert("Your password cannot be empty");
+  ob.style.borderColor = "red";
+  ob.focus();
+  return false;
+ }
+
+}
